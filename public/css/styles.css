@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Nova+Square&family=Paprika&family=Shadows+Into+Light&display=swap');
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+/*1rem = 10px, 62.5% = 10px*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/*End base reset*/
+
+
+/*NavBar style*/
+#navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 3rem;
+    /* border-bottom: 2px solid black; */
+    text-shadow: 0 0 10px blue;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    /* background: #be3144; */
+    /*background-color: rgba(190, 49, 68, 0.2)*/
+    
+    background-color: #DE6E4B;
+    
+    z-index: 10;
+
+}
+
+#navbar .nav-list {
+    display: flex;
+    list-style: none;
+    margin-right: 2rem;
+
+
+}
+
+#navbar a {
+    text-decoration: none;
+    padding: 2.5rem;
+    display: block;
+    color: white;
+    font-family: "Shadows Into Light";
+}
+
+#navbar a:hover {
+    /* background: linear-gradient(45deg, red, yellow, blue, red); */
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 1rem 1rem 1rem 1rem;
+    border-bottom: 3px solid #fff;
+}
+
+
+/*Section style*/
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: "Nova Square";
+    color: white;
+    text-shadow: 0 0 10px #d916e9;
+    background-image: linear-gradient(to right top, #764732, #7c4430, #82412f, #893d2e, #8f392f, #94353b, #973349, #983357, #8d3d71, #7b4a85, #615793, #446198);
+    background-image: url(https://images.unsplash.com/photo-1540397106260-e24a507a08ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=761&q=80);
+    background-size: cover;
+    background-position: center center;
+}
+
+#welcome-section p {
+    font-family: "Annie Use Your Telescope";
+}
+
+
+.projects-section-header {
+    text-align: center;
+    color: black;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    font-size: 3rem;
+    /* text-decoration: underline; */
+    font-family: "Nova Square";
+    /* text-shadow: 0 0 10px #d916e9; */
+
+}
+
+/*#projects {
+    
+     background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); 
+} */
+
+.projects-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 120rem;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+
+
+}
+
+
+.project-image {
+    width: 45rem;
+    height: 45rem;
+    transition: transform 0.3s ease;
+    /* border: 0.3rem solid black;
+    border-radius: 1rem 7rem 1rem 7rem; */
+
+}
+
+
+.project-tile {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 3rem;
+    background: #1ae5d2;
+    color: white;
+    /* border: 0.3rem solid black; */
+    /* border-radius: 1rem 7rem 1rem 7rem; */
+    font-family: "Annie Use Your Telescope";
+    transition: transform 0.3s ease;
+    
+
+}
+
+
+.project-tile:hover{
+    transform: scale(1.05);
+    
+}
+
+.code {
+    display: none;
+
+}
+
+.project-tile:hover .code {
+    display: inline;
+    color: #be3144;
+    
+    /* font-size: 3.5rem; */
+}
+
+.project-link {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    
+}
+
+
+.btn-show-all {
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    font-size: 3rem;
+    text-decoration: none;
+    font-family: "Nova Square";
+    color: black;
+    transition: font-size 1s ease-out;
+
+}
+
+.btn-show-all:hover {
+    font-size: 4rem;
+    text-shadow: 0 0 10px #393f3a;
+}
+
+.btn-show-all i {
+    margin-left: 1rem;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    height: 100vh;
+    /* background-image: linear-gradient(to right top, #a686b7, #ab73a4, #af5e8d, #b04a70, #ab3751, #9a2c4d, #882248, #771943, #512049, #2c203e, #141928, #0b0c0d); */
+    background-color: #7FD1B9;
+    /* color: #fff; */
+}
+
+.contact-section-header {
+    padding: 2rem;
+    color: black;
+    /* text-shadow: 0 0 10px #08F71E; */
+    transition: transform 2s ease-out;
+}
+
+.contact-section-header:hover {
+    transform: rotate(15deg);
+}
+
+.contact-links {
+    padding: 2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+
+
+}
+
+
+
+.contact-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+
+}
+
+.btn.contact-details {
+    transition: font-size 1s ease-out;
+}
+
+.btn.contact-details:hover {
+    font-size: 3rem;
+}
+
+#facebook {
+    color: #0d1bf2;
+}
+
+#github {
+    color: black;
+}
+
+#twitter {
+    color: #1874e7;
+}
+
+#arroba {
+    color: #000000;
+}
+
+#cell {
+    color: #f20d10;
+}
+
+/*Footer Style*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 2.5rem;
+    padding: 3.7rem;
+    color: white;
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+    background-color: #DE6E4B;
+
+}
+
+footer .RD {
+    width: 4rem;
+}
+
+footer i {
+    color: orange;
+}
+
+/*Media queries*/
+
+@media (min-width:960px) {
+    .project-image:hover {
+        transform: scale(1.05);
+        /* height: 46rem; */
+
+    }
+
+    .project-link .project-image:hover+.project-tile .code {
+        display: inline;
+        color: #be3144;
+        /* font-size: 3.5rem; */
+    }
+
+}
+
+
+@media (max-width:960px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+@media (max-width:500px) {
+    #welcome-section {
+        font-size: 2.3rem;
+    }
+
+    .project-image {
+        width: 23rem;
+        height: 23rem;
+    }
+
+
+    .project-tile {
+        font-size: 2rem;
+        
+    }
+
+    .projects-section-header {
+        font-size: 2rem;
+    }
+
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .contact-links a {
+
+        padding: 1rem;
+    }
+
+    footer {
+        align-items: center;
+    }
+
+    #navbar {
+        font-size: 2rem;
+    }
+
+    .contact-section-header {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width:585px) {
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .contact-links a {
+
+        padding: 1rem;
+    }
+}
+
+@media (max-width:385px) {
+    #welcome-section {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width:325px) {
+    .projects-section-header {
+        font-size: 1.5rem;
+    }
+}
